@@ -27,18 +27,17 @@ public class PokemonParty extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-		getParty(request,response);
-		
-
-	
+		try {
+			getParty(request,response);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}	
 	}
 
-	private void getParty(HttpServletRequest request, HttpServletResponse response) {
+	private void getParty(HttpServletRequest request, HttpServletResponse response) throws Exception{
 
 		Trainer trainer = (Trainer) session.getAttribute("ActiveUser");
-		int idTrainer = trainer.getId();
-		List<Pokemon> party = service.getTrainerParty(idTrainer);
+		List<Pokemon> party = service.getAllPartyPokemon(trainer);
 		request.setAttribute("Party", party);
 		
 		RequestDispatcher rd = request.getRequestDispatcher("main-menu.html");

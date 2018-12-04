@@ -1,7 +1,6 @@
 package com.fdm.group.controller;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -36,12 +35,16 @@ public class TrainerCreationController extends HttpServlet {
 		String passWord1 = request.getParameter("trainerPassword1");
 		String passWord2 = request.getParameter("trainerPassword2");
 		
-		List<Trainer> trainer = service.getUser(username);
+		Trainer trainer = service.getTrainer(username);
 		
-		if(! passWord1.equals(passWord2) || trainer.size() > 0) {
+		if(! passWord1.equals(passWord2)) {
 			RequestDispatcher dispatcher = request.getRequestDispatcher("Create-trainer.html");
 			dispatcher.forward(request, response);
-		}else if(passWord1.equals(passWord2) && trainer.size() == 0){
+		}else if(trainer == null) {
+			RequestDispatcher dispatcher = request.getRequestDispatcher("Create-trainer.html");
+			dispatcher.forward(request, response);
+			
+		}else if(passWord1.equals(passWord2) && trainer != null){
 			trainer.setUsername(username);
 			trainer.setPassword(passWord1);
 			

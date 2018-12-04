@@ -1,7 +1,6 @@
 package com.fdm.group.controller;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -28,6 +27,7 @@ public class LogInController extends HttpServlet {
 
 		String password = request.getParameter("trainerPassword");
 		String name = request.getParameter("trainerUsername");
+		@SuppressWarnings("unused")
 		Boolean result = service.verifyPassword(name,password);
 		
 		Trainer activeUser = service.getTrainer(name);

@@ -15,12 +15,12 @@ import com.fdmgroup.services.PokemonService;
 import com.fdmgroup.services.PokemonServiceImpl;
 
 
-public class Desert extends HttpServlet {
+public class SafariController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	PokemonService service;
        
 
-    public Desert() {
+    public SafariController() {
         super();
         this.service = new PokemonServiceImpl();
     }
@@ -28,7 +28,8 @@ public class Desert extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		List<Pokemon> wild = service.getAllPokemonFromZone("Desert");
+		String zone = request.getParameter("Zone");
+		List<Pokemon> wild = service.getAllPokemonFromZone(zone);
 		int rnd = new Random().nextInt(wild.size());
 		Pokemon encounter = wild.get(rnd);		
 
