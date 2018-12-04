@@ -29,9 +29,9 @@ public class PokemonServiceImpl implements PokemonService {
 		return this.pokemonDao.swap(partyPokemon, storagePokemon);
 	}
 
-	public boolean changeOwner(Pokemon pokemon, int newOwnerID) {
+	public boolean changeOwner(Pokemon pokemon) {
 		// TODO Auto-generated method stub
-		return this.pokemonDao.changeOwner(pokemon, newOwnerID);
+		return this.pokemonDao.changeOwner(pokemon);
 	}
 
 	public List<Pokemon> getAllPokemonFromZone(String zone) {

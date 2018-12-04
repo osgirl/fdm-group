@@ -11,7 +11,7 @@ public interface TrainerService {
 	
 	boolean verifyPassword(String password, String username);
 	
-	void setMoney(Trainer trainer, double money);
+	void setMoney(Trainer trainer);
 	
 	Trainer getTrainer(String username);
 	

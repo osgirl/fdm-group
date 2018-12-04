@@ -28,17 +28,6 @@ public class TrainerDaoImpl implements TrainerDao {
 
 	public boolean addTrainer(Trainer trainer) {
 
-		openEntityManager();
-
-		em.getTransaction().begin();
-
-		em.persist(trainer);
-
-		em.getTransaction().commit();
-
-		System.out.println();
-		System.out.println("-------");
-		System.out.println();
 		return true;
 	}
 

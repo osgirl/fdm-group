@@ -12,7 +12,7 @@ public interface PokemonService {
 	
 	boolean swap(Pokemon partyPokemon, Pokemon storagePokemon);
 	
-	boolean changeOwner(Pokemon pokemon, int newOwnerID);
+	boolean changeOwner(Pokemon pokemon);
 	
 	List<Pokemon> getAllPokemonFromZone(String zone);
 	
