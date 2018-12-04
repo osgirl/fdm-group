@@ -1,1 +1,0 @@
-<html><body><%out.println(request.getAttribute("poop")); %></body></html>
