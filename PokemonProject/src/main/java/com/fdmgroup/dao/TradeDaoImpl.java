@@ -1,8 +1,13 @@
 package com.fdmgroup.dao;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+
+import com.fdmgroup.models.Trade;
+import com.fdmgroup.models.Trainer;
 
 public class TradeDaoImpl implements TradeDao {
 
@@ -19,5 +24,20 @@ public class TradeDaoImpl implements TradeDao {
 	public void closeEntityManager() {
 		this.em.close();
 		this.emf.close();
+	}
+
+	public List<Trade> listTrades(Trainer trainer) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void acceptTrade(Trade trade) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void declineTrade(Trade trade) {
+		// TODO Auto-generated method stub
+		
 	}
 }

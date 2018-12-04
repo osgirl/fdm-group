@@ -24,8 +24,8 @@ public class Trainer {
 	
 	public Trainer() {
 	}
-	public Trainer(int trainerID, String username, String password, double money) {
-		this.trainerID = trainerID;
+	public Trainer(String username, String password, double money) {
+
 		this.username = username;
 		this.password = password;
 		this.money = money;

@@ -31,7 +31,7 @@ public class Trade {
 	
 	@ManyToOne
 	@JoinColumn(name = "pokemonID")
-	@Column(name = "username", nullable = false)
+//	@Column(name = "username", nullable = false)
 	private Pokemon pokemonRequest;
 
 	
