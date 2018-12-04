@@ -13,8 +13,6 @@ public interface TrainerDao {
 	
 	void setMoney(Trainer trainer, double money);
 	
-	Trainer getTrainer(int id);
-	
 	Trainer getTrainer(String username);
 	
 	List<Pokemon> getAllOwnedPokemon(Trainer trainer);

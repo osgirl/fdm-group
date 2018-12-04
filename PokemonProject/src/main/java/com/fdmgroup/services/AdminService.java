@@ -4,12 +4,8 @@ import com.fdmgroup.models.Admin;
 import com.fdmgroup.models.Trainer;
 
 public interface AdminService {
-
-	Admin getAdmin(int id);
 	
 	Admin getAdmin(String username);
-	
-	Trainer getTrainer(int id);
 	
 	Trainer getTrainer(String username);
 
@@ -23,8 +19,8 @@ public interface AdminService {
 
 	boolean removeAdmin(Admin admin);
 
-	boolean updateTrainer(int id, Trainer trainer);
+	boolean updateTrainer(String username, Trainer trainer);
 	
-	boolean updateAdmin(int id, Admin admin);
+	boolean updateAdmin(String Username, Admin admin);
 	
 }

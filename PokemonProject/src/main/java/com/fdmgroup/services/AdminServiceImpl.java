@@ -38,29 +38,19 @@ public class AdminServiceImpl implements AdminService {
 		return this.adminDao.removeAdmin(admin);
 	}
 
-	public boolean updateTrainer(int id, Trainer trainer) {
+	public boolean updateTrainer(String username, Trainer trainer) {
 		// TODO Auto-generated method stub
-		return this.adminDao.updateTrainer(id, trainer);
+		return this.adminDao.updateTrainer(username, trainer);
 	}
 
-	public boolean updateAdmin(int id, Admin admin) {
+	public boolean updateAdmin(String username, Admin admin) {
 		// TODO Auto-generated method stub
-		return this.adminDao.updateAdmin(id, admin);
-	}
-
-	public Admin getAdmin(int id) {
-		// TODO Auto-generated method stub
-		return this.adminDao.getAdmin(id);
+		return this.adminDao.updateAdmin(username, admin);
 	}
 
 	public Admin getAdmin(String username) {
 		// TODO Auto-generated method stub
 		return this.adminDao.getAdmin(username);
-	}
-
-	public Trainer getTrainer(int id) {
-		// TODO Auto-generated method stub
-		return this.adminDao.getTrainer(id);
 	}
 
 	public Trainer getTrainer(String username) {

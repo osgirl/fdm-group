@@ -40,11 +40,6 @@ public class TrainerServiceImpl implements TrainerService {
 		return this.trainerDao.getAllStoredPokemon(trainer);
 	}
 
-	public Trainer getTrainer(int id) {
-		// TODO Auto-generated method stub
-		return this.trainerDao.getTrainer(id);
-	}
-
 	public Trainer getTrainer(String username) {
 		// TODO Auto-generated method stub
 		return this.trainerDao.getTrainer(username);
@@ -54,4 +49,5 @@ public class TrainerServiceImpl implements TrainerService {
 		// TODO Auto-generated method stub
 		this.trainerDao.setMoney(trainer, money);
 	}
+
 }

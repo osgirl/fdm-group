@@ -5,11 +5,7 @@ import com.fdmgroup.models.Trainer;
 
 public interface AdminDao {
 
-	Admin getAdmin(int id);
-
 	Admin getAdmin(String username);
-	
-	Trainer getTrainer(int id);
 	
 	Trainer getTrainer(String username);
 
@@ -23,8 +19,8 @@ public interface AdminDao {
 
 	boolean removeAdmin(Admin admin);
 
-	boolean updateTrainer(int id, Trainer trainer);
+	boolean updateTrainer(String username, Trainer trainer);
 
-	boolean updateAdmin(int id, Admin admin);
+	boolean updateAdmin(String username, Admin admin);
 
 }
