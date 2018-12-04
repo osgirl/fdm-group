@@ -4,4 +4,34 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>Ball</servlet-name>
+  	<display-name>Ball</display-name>
+  	<description></description>
+  	<servlet-class>com.fdmgroup.controller.Ball</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>BaitController</servlet-name>
+  	<display-name>BaitController</display-name>
+  	<description></description>
+  	<servlet-class>com.fdmgroup.controller.BaitController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>RockController</servlet-name>
+  	<display-name>RockController</display-name>
+  	<description></description>
+  	<servlet-class>com.fdmgroup.controller.RockController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Ball</servlet-name>
+  	<url-pattern>/Ball</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>BaitController</servlet-name>
+  	<url-pattern>/BaitController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>RockController</servlet-name>
+  	<url-pattern>/RockController</url-pattern>
+  </servlet-mapping>
 </web-app>
