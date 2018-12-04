@@ -12,8 +12,11 @@
 </head>
 
 <body>
-    <h1> All Right! <%request.GetParameter("wildPokemon").getName().getName()%> was caught!
-    </h1>
+    <p> All Right! <%request.GetParameter("wildPokemon").getName().getName()%> was caught!</p>
+    <p> New Pokedex Data will be added for <%request.GetParameter("wildPokemon").getName().getName()%> </p>
+    
+   <p><%request.GetParameter("wildPokemon").getName().getName()%> will be added to your PC </p>
+    
 
 </body>
 
