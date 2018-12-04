@@ -12,15 +12,9 @@ public class AdminServiceImpl implements AdminService {
 
 		this.adminDao = new AdminDaoImpl();
 	}
-
-	public boolean findUsername(String username) {
+	public boolean verifyPassword(String username, String password) {
 		// TODO Auto-generated method stub
-		return this.adminDao.findUsername(username);
-	}
-
-	public boolean verifyPassword(String password) {
-		// TODO Auto-generated method stub
-		return this.adminDao.verifyPassword(password);
+		return this.adminDao.verifyPassword(username, password);
 	}
 
 	public boolean addTrainer(Trainer trainer) {

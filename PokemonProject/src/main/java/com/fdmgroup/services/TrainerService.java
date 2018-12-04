@@ -7,13 +7,11 @@ import com.fdmgroup.models.Trainer;
 
 public interface TrainerService {
 
-	void addTrainer(Trainer trainer);
+	boolean addTrainer(Trainer trainer);
 	
-	boolean findUsername(String password);
+	boolean verifyPassword(String password, String username);
 	
-	boolean verifyPassword(String password);
-	
-	void setMoney(Trainer trainer);
+	void setMoney(Trainer trainer, double money);
 	
 	Trainer getTrainer(int id);
 	

@@ -12,10 +12,8 @@ public interface AdminService {
 	Trainer getTrainer(int id);
 	
 	Trainer getTrainer(String username);
-	
-	boolean findUsername(String username);
 
-	boolean verifyPassword(String password);
+	boolean verifyPassword(String password, String username);
 
 	boolean addTrainer(Trainer trainer);
 

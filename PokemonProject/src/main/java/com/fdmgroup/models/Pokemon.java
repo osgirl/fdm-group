@@ -32,8 +32,7 @@ public class Pokemon {
 	
 	public Pokemon() {
 	}
-	public Pokemon(int pokemonID, Trainer trainerID, PokeStats name, boolean tired, boolean storage, boolean caught) {
-		this.pokemonID = pokemonID;
+	public Pokemon(Trainer trainerID, PokeStats name, boolean tired, boolean storage, boolean caught) {
 		this.trainerID = trainerID;
 		this.name = name;
 		this.tired = tired;

@@ -15,26 +15,16 @@ public class TrainerServiceImpl implements TrainerService {
 		trainerDao = new TrainerDaoImpl();
 	}
 
-	public void addTrainer(Trainer trainer) {
+	public boolean addTrainer(Trainer trainer) {
 		// TODO Auto-generated method stub
-		this.trainerDao.addTrainer(trainer);
+		return this.trainerDao.addTrainer(trainer);
 	}
 
-	public boolean findUsername(String password) {
+	public boolean verifyPassword(String username, String password) {
 		// TODO Auto-generated method stub
-		return this.trainerDao.findUsername(password);
+		return this.trainerDao.verifyPassword(username, password);
 	}
-
-	public boolean verifyPassword(String password) {
-		// TODO Auto-generated method stub
-		return this.trainerDao.verifyPassword(password);
-	}
-
-	public void setMoney(Trainer trainer) {
-		// TODO Auto-generated method stub
-		this.trainerDao.setMoney(trainer);
-	}
-
+	
 	public List<Pokemon> getAllOwnedPokemon(Trainer trainer) {
 		// TODO Auto-generated method stub
 		return this.trainerDao.getAllOwnedPokemon(trainer);
@@ -58,5 +48,10 @@ public class TrainerServiceImpl implements TrainerService {
 	public Trainer getTrainer(String username) {
 		// TODO Auto-generated method stub
 		return this.trainerDao.getTrainer(username);
+	}
+
+	public void setMoney(Trainer trainer, double money) {
+		// TODO Auto-generated method stub
+		this.trainerDao.setMoney(trainer, money);
 	}
 }

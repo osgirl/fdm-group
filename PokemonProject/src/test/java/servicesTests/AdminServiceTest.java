@@ -1,7 +1,14 @@
 package servicesTests;
 
-import junit.framework.TestCase;
+import static org.junit.Assert.*;
 
-public class AdminServiceTest extends TestCase {
+import org.junit.Test;
+
+public class AdminServiceTest {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
 
 }

@@ -1,7 +1,14 @@
 package servicesTests;
 
-import junit.framework.TestCase;
+import static org.junit.Assert.*;
 
-public class PokemonServiceTest extends TestCase {
+import org.junit.Test;
+
+public class PokemonServiceTest {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
 
 }

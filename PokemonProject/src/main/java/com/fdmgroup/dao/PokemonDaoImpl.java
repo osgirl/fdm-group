@@ -11,7 +11,7 @@ public class PokemonDaoImpl implements PokemonDao {
 	
 	public void openEntityManager() {
 		if (!this.emf.isOpen()) {
-			this.emf = Persistence.createEntityManagerFactory("mydb");
+			this.emf = Persistence.createEntityManagerFactory("PokemonProject");
 			this.em = emf.createEntityManager();
 		}
 	}

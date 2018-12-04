@@ -13,9 +13,7 @@ public interface AdminDao {
 	
 	Trainer getTrainer(String username);
 
-	boolean findUsername(String username);
-
-	boolean verifyPassword(String password);
+	boolean verifyPassword(String username, String password);
 
 	boolean addTrainer(Trainer trainer);
 
