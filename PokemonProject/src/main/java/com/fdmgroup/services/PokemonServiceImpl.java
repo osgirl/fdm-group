@@ -34,8 +34,8 @@ public class PokemonServiceImpl implements PokemonService {
 		return this.pokemonDao.changeOwner(pokemon);
 	}
 
-	public List<Pokemon> getAllPokemonFromZone(String zone) {
+	public Pokemon getPokemonFromZone(String zone) {
 		// TODO Auto-generated method stub
-		return this.pokemonDao.getAllPokemonFromZone(zone);
+		return this.pokemonDao.getPokemonFromZone(zone);
 	}
 }

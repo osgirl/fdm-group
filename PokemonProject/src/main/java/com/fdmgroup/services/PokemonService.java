@@ -14,6 +14,6 @@ public interface PokemonService {
 	
 	boolean changeOwner(Pokemon pokemon);
 	
-	List<Pokemon> getAllPokemonFromZone(String zone);
+	Pokemon getPokemonFromZone(String zone);
 	
 }

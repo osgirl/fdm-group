@@ -32,6 +32,13 @@ public class Pokemon {
 	
 	public Pokemon() {
 	}
+	public Pokemon(PokeStats name) {
+		this.name = name;
+		this.tired = false;
+		this.caught = false;
+		this.trainerID = 0;
+		
+	}
 	public Pokemon(Trainer trainerID, PokeStats name, boolean tired, boolean storage, boolean caught) {
 		this.trainerID = trainerID;
 		this.name = name;

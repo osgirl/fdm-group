@@ -1,6 +1,7 @@
 package com.fdmgroup.dao;
 
 import java.util.List;
+import java.util.Random;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -94,17 +95,33 @@ public class PokemonDaoImpl implements PokemonDao {
 		return true;
 	}
 
-	public List<Pokemon> getAllPokemonFromZone(String zone) {
-		List<Pokemon> pokemon = null;
-		List<PokeStats> pokeList;
-		Query query = em.createQuery("select pokemon from Pokemon pokemon order by ID", PokeStats.class);
+	public boolean addPokemon(Pokemon pokemon) {
+		
+		openEntityManager();
 
+		em.getTransaction().begin();
+
+		em.persist(pokemon);
+
+		em.getTransaction().commit();
+
+		System.out.println();
+		System.out.println("-------");
+		System.out.println();
+		return false;
+		
+	}
+	public Pokemon getPokemonFromZone(String zone) {
+		List<PokeStats> pokeList;
+		
+		Query query = em.createQuery("select pokeStats from PokeStats pokeStats where pokeStats.zone=:Zone order by ID", PokeStats.class);
+		query.setParameter("Zone", zone);
 		pokeList = query.getResultList();
+		int rnd = new Random().nextInt(pokeList.size());
+		PokeStats selection = pokeList.get(rnd);
 		
-		for (PokeStats tempPokemon : pokeList) {
-			
-		}
-		
+		Pokemon pokemon = new Pokemon(selection);
+		this.addPokemon(pokemon);
 		return pokemon;
 	}
 }
