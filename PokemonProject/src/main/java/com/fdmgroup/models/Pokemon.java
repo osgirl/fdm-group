@@ -17,7 +17,7 @@ public class Pokemon {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int pokemonID;
 	@ManyToOne
-	@JoinColumn(name = "trainerID")
+	@JoinColumn(name = "trainerID", nullable = true)
 	private Trainer trainerID;
 	@ManyToOne
 	@JoinColumn(name = "name")
@@ -39,6 +39,13 @@ public class Pokemon {
 		this.tired = tired;
 		this.storage = storage;
 		this.caught = caught;
+	}
+	public Pokemon(PokeStats selection) {
+		this.name = selection;
+		this.trainerID = null;
+		this.caught = false;
+		this.storage= false;
+		this.tired = false;
 	}
 	public int getPokemonID() {
 		return pokemonID;
