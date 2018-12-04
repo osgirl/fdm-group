@@ -26,10 +26,10 @@ public class TrainerTest {
 	public void setup()
 	{
 		mockTrainer = mock(Trainer.class);
-//		mockEmf = mock(EntityManagerFactory.class);
-//		mockEm = mock(EntityManager.class);
-//		mockPersistence = mock(Persistence.class);
-//		trainerDao = new TrainerDaoImpl(mockEmf,mockEm); 
+		mockEmf = mock(EntityManagerFactory.class);
+		mockEm = mock(EntityManager.class);
+		mockPersistence = mock(Persistence.class);
+		trainerDao = new TrainerDaoImpl(mockEmf,mockEm); 
 		
 	}
 
@@ -49,12 +49,9 @@ public class TrainerTest {
 	@Test
 	public void test_AddTrainerMethod_Calls_EntityManagerPersist()
 	{
-		Trainer trainer = new Trainer("d.spurr","Daniel",1.00);
-		mockEmf = mock(EntityManagerFactory.class);
-		mockEm = mock(EntityManager.class);
-		trainerDao = new TrainerDaoImpl(mockEmf,mockEm); 
 		trainerDao.addTrainer(mockTrainer);
 		verify(mockEm).persist(mockTrainer);
 	}
+	
 
 }
