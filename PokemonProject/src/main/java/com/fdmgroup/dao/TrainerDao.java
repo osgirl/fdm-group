@@ -9,14 +9,10 @@ public interface TrainerDao {
 
 	void addTrainer(Trainer trainer);
 	
-	boolean findUsername(String password);
-	
-	boolean verifyPassword(String password);
+	boolean verifyPassword(String password, String username);
 	
 	void setMoney(Trainer trainer);
-	
-	Trainer getTrainer(int id);
-	
+		
 	Trainer getTrainer(String username);
 	
 	List<Pokemon> getAllOwnedPokemon(Trainer trainer);

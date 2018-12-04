@@ -1,8 +1,12 @@
 package com.fdmgroup.dao;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+
+import com.fdmgroup.models.Pokemon;
 
 public class PokemonDaoImpl implements PokemonDao {
 
@@ -19,5 +23,30 @@ public class PokemonDaoImpl implements PokemonDao {
 	public void closeEntityManager() {
 		this.em.close();
 		this.emf.close();
+	}
+
+	public boolean Withdraw(Pokemon pokemon) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public boolean deposit(Pokemon pokemon) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public boolean swap(Pokemon partyPokemon, Pokemon storagePokemon) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public boolean changeOwner(Pokemon pokemon, int newOwnerID) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public List<Pokemon> getAllPokemonFromZone(String zone) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
