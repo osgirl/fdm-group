@@ -11,7 +11,7 @@ public class TrainerServiceImpl implements TrainerService {
 	
 	TrainerDao trainerDao;
 	
-	private TrainerServiceImpl(){
+	public TrainerServiceImpl(){
 		trainerDao = new TrainerDaoImpl();
 	}
 
@@ -25,9 +25,9 @@ public class TrainerServiceImpl implements TrainerService {
 		return this.trainerDao.findUsername(password);
 	}
 
-	public boolean verifyPassword(String password) {
+	public boolean verifyPassword(String username,String password) {
 		// TODO Auto-generated method stub
-		return this.trainerDao.verifyPassword(password);
+		return this.trainerDao.verifyPassword(username,password);
 	}
 
 	public void setMoney(Trainer trainer) {

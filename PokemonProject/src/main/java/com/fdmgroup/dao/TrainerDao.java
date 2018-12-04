@@ -11,7 +11,7 @@ public interface TrainerDao {
 	
 	boolean findUsername(String password);
 	
-	boolean verifyPassword(String password);
+	boolean verifyPassword(String username, String password);
 	
 	void setMoney(Trainer trainer);
 	

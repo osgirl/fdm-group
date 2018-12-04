@@ -10,7 +10,7 @@ public class PokemonServiceImpl implements PokemonService {
 
 	private PokemonDao pokemonDao;
 	
-	private PokemonServiceImpl() {
+	public PokemonServiceImpl() {
 		pokemonDao = new PokemonDaoImpl();
 	}
 
