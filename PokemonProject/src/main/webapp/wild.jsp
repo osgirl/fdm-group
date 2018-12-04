@@ -14,7 +14,7 @@
 
 	<header> </header>
 	<div class="row">
-		<h1>A Wild Pokemon !</h1>
+		<h1>A Wild Pokemon <%request.getParameter("wildPokmeon").getName().getName();%>!</h1>
 		
 		<img src="Images/pokemon001.png">
 	</div>
